@@ -1,15 +1,19 @@
-from driver import *
+from graph import *
 
 """
 TODO:
--retrieve every drivers points from the database along with their names and teams
--create a dictionary (or a json file) of drivers names and their points
+
+-create a json file) of drivers/constructors names and their points
+-display the graphs on the website
+-fetch more data for ml 
+-turn classes Constructor and Driver into a one polymorphic class
 
 """
 
 
 def main():
-    get_drivers(connection)
+    plot_graph(driver_data)
+    plot_graph(constructor_data)
 
 
 if __name__ == "__main__":

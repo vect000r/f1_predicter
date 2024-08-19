@@ -45,8 +45,10 @@ drivers = dict(zip(driver_names, driver_ids))
 
 
 def get_drivers(cnx):
+    driver_data = []
     for entry in drivers.items():
         # (('Bottas', 'Sauber'), 822)
         driver = Driver(list(entry)[0][0], list(entry)[0][1], list(entry)[1])
         driver.get_points(cnx)
-        print(driver.points)
+        driver_data.append(driver.points)
+    return driver_data
